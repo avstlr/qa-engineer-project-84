@@ -114,7 +114,7 @@ expected-result: |
 Товар Apple удален из корзины
 
 - symmary: |
-Удасление товаров из корзины кнопкой Clear cart
+Удаление товаров из корзины кнопкой Clear cart
 requirement: |
 При нажатии на кнопку Clear cart все товары удаляются из корзины
 prerequisites: |

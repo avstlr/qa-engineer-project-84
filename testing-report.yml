@@ -1,0 +1,64 @@
+---
+- summary: |
+Поиск товара по ключевому слову в строке Поиск
+status: pass
+
+- summary: |
+Проверка работы фильтра по категориям товара
+status: pass
+
+- summary: |
+Проверка поиска товаров при помощи фильтра по бренду
+status: pass
+
+- summary: |
+Проверка работоспособности чек-бокса In Stock
+status: pass
+
+- summary: |
+Проверка работы фильтра по стоимости товара
+status: pass
+
+- summary: |
+Проверка работы фильтра по стоимости товара
+status: pass
+
+- summary: |
+Проверка работоспособности возможности просматривать карточку товара
+status: pass
+
+- summary: |
+Удаление товара из корзины кнопкой Delete
+status: pass
+
+- summary: |
+Удаление товаров из корзины кнопкой Clear cart
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Continue shopping
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Checkout
+status: pass
+
+- summary: |
+Проверка счетчика товаров Cart
+status: pass
+
+- summary: |
+Проверка возможности изменить язык в магазине через кнопку Language
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Store
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Next
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Previous
+status: pass

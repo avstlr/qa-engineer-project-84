@@ -1,14 +1,5 @@
 ---
 - summary: |
-environment: |
-Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
-ОС Windows 10 Домашняя 20H2
-steps-to-reproduce: |
-Зайти на страницу магазина https://hexlet-products-store.vercel.app/
-exspected-result: |
-actual-result: |
-
-- summary: |
 Некорректное отображение товаров на первой странице при возврате на нее через кнопку Previous
 environment: |
 Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
@@ -51,3 +42,160 @@ actual-result: |
 Напроиив языка English не отображается флаг
 Ссылка на изображение не добавлена
 Приложен скриншот ошибки Screenshot Bug/bagLanguage.png
+
+- summary: |
+Нельзя сбросить фильтр категории товара 
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Выбррать любую категорию товара из выпадающего списка
+exspected-result: |
+Можно сбросить фильтр категории товара
+actual-result: |
+Фильтр товара нет возможности сбросить
+
+- summary: |
+В списке брендов чек-бокс без названия
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+В списке брендов отображены чек-боксы
+Один из чек-боксов без названия
+exspected-result: |
+Каждый чек-бокс имеет наименование
+actual-result: |
+Отображается чек-бокс без названия 
+В DevTools во вкладке Elements не задано название чек-бокса for="undefined-check"
+Приложен скриншот ошибки Screenshot Bug/bugCheckbox.png
+
+- summary: |
+В Price в строке From-To можно задать отрицательное число в графе To
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+В Price строка From-To задать значение в графе To -2
+exspected-result: |
+В Price в строке From-To можно задать только положительные значения не меньше 0
+actual-result: |
+В Price строка From-To можно задать отрицательное число в графе To 
+В DevTools во вкладке Elements не задано значение value=""
+Приложен скриншот ошибки Screenshot Bug/bugPrice.png
+
+- summary: |
+Фильтр товаров по цене настроен по ценам без учета скидки
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+В строке Price выставить цену From 12 - To 13
+exspected-result: |
+Отображается весь товар который соответствует диапозону цен с учетом скидки от 12 до 13 
+actual-result: |
+Отображается товар, соответствующий диапозону цен от 12 до 13, без учета скидки
+Приложен скриншот ошибки Screenshot Bug/bugPriceFromTo.png
+
+- summary: |
+При оформлении заказа в Cart, данные обрабатываются с ошибкой 500
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Добавить товар в Cart
+Перейти в Cart
+Нажать Checkout
+Появляется окно об успешном заказе
+exspected-result: |
+Заказ оформлен
+Данные обработаны без ошибок
+actual-result: |
+Заказ не офрмлен
+Данные обработаны с ошибкой 500
+Приложен скриншот ошибки Screenshot Bug/bugOrder.png
+
+- summary: |
+Окно после оформления заказа не закрывается через крестик
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Добавить товары в корзину
+Перейти в Cart
+Нажать Checkout
+Закрыть окно через крестик
+exspected-result: |
+Окно закрывается через крестик
+actual-result: |
+Окно через крестик не удается закрыть
+Кнопка не активна
+Приложен скриншот ошибки Screenshot Bug/bugClose.png
+
+- summary: |
+Во вкладке Cart количество товаров не выравнено
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Добавить более одного товара в корзину
+Перейти в Cart
+exspected-result: |
+Визуальные элементы и столбцы, обозначающие название товара, количество и цену, выравнены и визуально находятся друг под другом
+actual-result: |
+Столбец, обозначающий количество товара, не выравнен и располагается криво
+Приложен скриншот ошибки Screenshot Bug/bugCart.png
+
+- summary: |
+В модульном окне Order placed successfully количество товаров не выравнено
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Добавить более одного товара в корзину
+Перейти в Cart
+Нажать Checkout
+exspected-result: |
+В модульном окне Order placed successfully столбцы, обозначающие название товара, количество и цену, выравнены и визуально находятся друг под другом
+actual-result: |
+В модульном окне Order placed successfully столбец, обозначающий количество товара, не выравнен
+Приложен скриншот ошибки Screenshot Bug/bugOrderVisually.png
+
+- summary: |
+При выборе русского языка описание товара не переводится на русский язык
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Во вкладке Language в выпадающем списке выбрать язык Russian
+exspected-result: |
+Весь интерфейс магазина переводится на русский язык
+actual-result: |
+Описание товаров в катологе не переводится на русский язык
+Приложен скриншот ошибки Screenshot Bug/bugRussian.png
+
+- summary: |
+После перезагрузки страницы магазина удаленный товар через кнопку Clear cart снова отображается в корзине
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+Добавить любой товар в корзину
+Нажать на кнопку Cart
+Нажать на кнопку Clear cart
+Нажать на кнопку F5
+exspected-result: |
+После удаления товаров кнопкой Clear cart корзина пустая и после обновления корзина остается пустой
+actual-result: |
+После удаления товаров кнопкой Clear cart корзина пустая, после обновления страницы товары снова появляются в корзине
+Приложен скриншот ошибки Screenshot Bug/bugClearCart.png

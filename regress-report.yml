@@ -48,37 +48,37 @@ test-cases:
       Проверка возможности изменить язык в магазине через кнопку Language
     status: fail
 
-  - summary: |
+ - summary: |
       Отправка оформленного заказа
     status: fail
 
 bugreports:
   - summary: |
-      При деактивации чек-бокса In Stock отображается товар, которого нет в наличии
-    environment: |
-      Google Chrome Версия 128.0.6613.137 (Официальная сборка) (64 бит)
-      ОС Windows 10 Домашняя 20H2
-    steps-to-reproduce: |
-      1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Деактивировать кнопку In Stock
-    expected-result: |
-      Отображается товар, которого нет в наличии
-    actual-result: |
+    При деактивации чек-бокса In Stock отображается товар, которого нет в наличии
+  environment: |
+    Google Chrome Версия 128.0.6613.137 (Официальная сборка) (64 бит)
+    ОС Windows 10 Домашняя 20H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Деактивировать кнопку In Stock 
+  expected-result: |
+    Отображается товар, которого нет в наличии    
+  actual-result: |
     Отображается товар, который есть в наличии
     Пропадает кнопка Next
     Ошибка изображена на скриншоте Screenshot Bug/bugInStock.png
     Ошибка изображена на скриншоте Screenshot Bug/bugNext.png
-  
-   - summary: |
-      Страница магазина перезагружается если нажать на название магазина Hexlet Store
-    environment: |
-      Google Chrome Версия 128.0.6613.137 (Официальная сборка) (64 бит)
-      ОС Windows 10 Домашняя 20H2
-    steps-to-reproduce: |
-      1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Открыть карточку любого товара или Cart
-      3. Нажать на название магазина Hexlet Store
-    expected-result: |
-      Пользователя возвращает на страницу магазина без перезагрузки страницы
-    actual-result: |
-      Страница магазина обновляется
+
+- summary: |
+    Страница магазина перезагружается если нажать на название магазина Hexlet Store
+  environment: |
+    Google Chrome Версия 128.0.6613.137 (Официальная сборка) (64 бит)
+    ОС Windows 10 Домашняя 20H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Открыть карточку любого товара или Cart
+    3. Нажать на название магазина Hexlet Store
+  expected-result: |
+    Пользователя возвращает на страницу магазина без перезагрузки страницы   
+  actual-result: |
+    Страница магазина обновляется

@@ -1,243 +1,241 @@
----
+---  
 - symmary: |
     Поиск товара по ключевому слову в строке "Поиск"
-requirement: |
+  requirement: |
     При вводе ключевого слова в строку "поиск" должен отображаться товар, содержащий в описании или наименовании данное слово
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Товар = "Kiwi"
-steps: |
-    - Вводим название товара
-expected-result: |
+  steps: |
+    - Вводим название товара, например "Kiwi"
+  expected-result: |
     Отображается товар "Kiwi"
 
 - symmary: |
     Проверка работы фильтра по категориям товара
-requirement: |
+  requirement: |
     При выборе категории отображается товар, соответствующий данной категории
-prerequisites: |
-    Открыта страница магазина
-test-data: |
-    Категория = furniture
-steps: |
+  prerequisites: |
+    no data
+  test-data: |
+    no data
+  steps: |
     - Нажимаем на категории
-    - Из выпадающего списка выбираем категорию "furniture"
-expected-result: |
-    Отображаются товары из категории "furniture"
+    - Из выпадающего списка выбираем любую категорию, например "furniture"
+  expected-result: |
+    Отображаются товары из выбранной категории
 
 - symmary: |
     Проверка поиска товаров при помощи фильтра по бренду
-requirement: |
+  requirement: |
     При выборе фильтра по бренду, будет отображаться товар данного бренда
-prerequisites: |
-    Открыта страница магазина
-test-data: |
-    Brand = Chanel
-    Brand = Knoll
-steps: |
-    - Активировать в фильтре brand чек-бокс Chanel
-    - Активировать в фильтре brand чек-бокс Knoll
-expected-result: |
+  prerequisites: |
+    no data
+  test-data: |
+    no data
+  steps: |
+    - Активировать в фильтре чек-бокс любого бренда, например brand Chanel
+  expected-result: |
     Отображается товар выбранных брендов
 
 - symmary: |
     Проверка работоспособности чек-бокса In Stock
-requirement: |
+  requirement: |
     При деактивации чек-бокса In Stock должен отображаться товар которого нет в наличии
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
     no data
-steps: |
+  test-data: |
+    no data
+  steps: |
     - Деактивировать чек-бокс In Stock
-expected-result: |
+  expected-result: |
     На странице отображается сообщение "Nothing found!"
 
 - symmary: |
     Проверка работы фильтра по стоимости товара
-requirement: |
+  requirement: |
     При выборе диапозона стоимости товара, будет отображаться товар, соответствующий ценновому диапозону
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Значение поля From = 50
     Значение поля To = 999999
-steps: |
+  steps: |
     - В поле From ввести значение 50
     - В поле To ввести значение 999999
-expected-result: |
+  expected-result: |
     Отображается товар, соответствующий ценовому диапозону от 50 до 999999
 
 - symmary: |
     Проверка работы фильтра по стоимости товара
-requirement: |
+  requirement: |
     При выборе отрицательной стоимости товара отображается ошибка
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Значение поля To = -1
-steps: |
+  steps: |
     - Вводим в поле To значение -1
-expected-result: |
+  expected-result: |
     Отображается ошибка, сообщающая о неверном формате стоимости
 
 - symmary: |
     Проверка работоспособности возможности просматривать карточку товара
-requirement: |
+  requirement: |
     При нажатии на карточку товара, выводится подробная информация о выбранном товаре
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Карточка товара = Powder Canister
-steps: |
+  steps: |
     - Нажать на карточку товара с названием Powder Canister
-expected-result: |
+  expected-result: |
     Открывается страница с информацией о товаре Powder Canister
 
 - symmary: |
     Удаление товара из корзины кнопкой Delete
-requirement: |
+  requirement: |
     При нажатии на кнопку Delete удалятся товар, который необходимо удалить
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Товар = Powder Canicter
     Товар = Red Nail Polish
     Товар = Dior J'adore
     Товар = Apple
-steps: |
+  steps: |
     - Добавить товар в корзину
     - Нажать кнопку Cart
     - Напротив товара "Apple" нажать кнопу Delete 
-expected-result: |
+  expected-result: |
     Товар Apple удален из корзины
 
 - symmary: |
     Обработка заказа пользователя
-requirement: |
+  requirement: |
     При нажатии на кнопку Checkout, заказ пользователя обрабатывается без ошибок
-prerequisites: |
+  prerequisites: |
     Открыта корзина магазина
-test-data: |
+  test-data: |
     товар = apple
-steps: |
+  steps: |
     - В каталоге товара находим товар Apple
     - Нажимаем добавить в корзину
     - Переходим в Cart
     - Нажимаем Checkout
-expected-result: |
+  expected-result: |
     Появляется сообщение об успешном заказе пользователя. Данные обрабатываются без ошибок
 
 - symmary: |
     Удаление товаров из корзины кнопкой Clear cart
-requirement: |
+  requirement: |
     При нажатии на кнопку Clear cart все товары удаляются из корзины
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Товар = Powder Canicter
     Товар = Red Nail Polish
     Товар = Dior J'adore
     Товар = Apple
-steps: |
+  steps: |
     - Добавить товар в корзину
     - Нажать на кнопку Cart
     - Нажать на кнопку Clear cart
-expected-result: |
+  expected-result: |
     Товары из корзины удалены. Таблица товаров пустая
 
 - symmary: |
     Проверка работоспособности кнопки Continue shopping
-requirement: |
+  requirement: |
     При  нажатии на кнопку Continue shopping пользователя возвращет на страницу магазина
-prerequisites: |
+  prerequisites: |
     Открыта корзина пользователя
-test-data: |
+  test-data: |
     no data
-steps: |
+  steps: |
     - Нажать на кнопку Continue shopping
-expected-result: |
+  expected-result: |
     Пользователя перенаправляет на страницу магазина
 
 - symmary: | 
     Проверка работоспособности кнопки Checkout
-requirement: |
+  requirement: |
     При нажатии на кнопку Checkou, у пользователя появляется окно "Order placed successfully"
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Товар = Powder Canicter
-steps: |
+  steps: |
     - Добавить товар Powder Canicter в корзину
     - Нажать на кнопку Cart
     - Нажать на кнопку Checkout
-expected-result: |
+  expected-result: |
     Выводится окно "Order placed successfully", содержащее название товара, количество и стоимость
 
 - symmary: |
     Проверка счетчика товаров Cart
-requirement: |
+  requirement: |
     При добавлении товаров в корзину счетчик должен отображать количество товаров, которые находятся в корзине. При добавлении увеличиваться
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Товар = Powder Canicter
-steps: |
+  steps: |
     - Добавить товар Powder Canicter в корзину
     - Еще раз добавить товар в корзину
-expected-result: |
+  expected-result: |
     При добавлении товара счетчик товаров Cart увеличивается
 
 - symmary: |
     Проверка возможности изменить язык в магазине через кнопку Language
-requirement: |
+  requirement: |
     При смене языка, язык интерфеса меняется на выбранный язык
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
+    no data
+  test-data: |
     Язык = Russian
-steps: |
+  steps: |
     - Нажать на кнопку Language
     - Из выпадающего списка выбрать язык Russian
-expected-result: |
+  expected-result: |
     Интерфейс магазина меняется на русский язык
 
 - symmary: |
     Проверка работоспособности кнопки Store
-requirement: |
+  requirement: |
     При нажатии на кнопку стор, пользователь попадает на страницу магазина
-prerequisites: |
+  prerequisites: |
     Открыта корзина пользователя
-test-data: |
+  test-data: |
     no data
-steps: |
+  steps: |
     - Нажать на кнопку Store
-expected-result: |
+  expected-result: |
     Пользователь попадает на страницу магазина
 
 - symmary: |
     Проверка работоспособности кнопки Next
-requirement: |
+  requirement: |
     При нажатии на кнопку Next, открывается следующая страница каталога товаров
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
     no data
-steps: |
+  test-data: |
+    no data
+  steps: |
     - Нажать на кнопку Next
-expected-result: |
+  expected-result: |
     Пользователю открывается слудующая страница католога товаров
 
 - symmary: |
     Проверка работоспособности кнопки Previous
-requirement: | 
+  requirement: | 
     При нажатии на кнопку Previous, открывается предыдущая страница каталога товаров
-prerequisites: |
-    Открыта страница магазина
-test-data: |
+  prerequisites: |
     no data
-steps: |
+  test-data: |
+    no data
+  steps: |
     - Нажать на кнопку Previous
-expected-result: |
+  expected-result: |
     Пользователю открывается предыдущая страница каталога товаров

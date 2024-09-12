@@ -67,6 +67,7 @@ actual-result: |
 Отображается товар, который есть в наличии
 Пропадает кнопка Next
 Приложен скриншот ошибки Screenshot Bug/bugInStock.png
+Приложен скриншот ошибки Screenshot Bug/bugNext.png
 
 - summary: |
 Страница магазина перезагружается если нажать на название магазина Hexlet Store

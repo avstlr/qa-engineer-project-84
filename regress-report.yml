@@ -54,10 +54,10 @@ test-cases:
 
 bugreports:
   - summary: |
-      При деактивации чек-бокса In Stock отображается товар, которого нет в наличии
+    При деактивации чек-бокса In Stock отображается товар, которого нет в наличии
   environment: |
-      Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
-      ОС Windows 10 Домашняя 20H2
+    Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+    ОС Windows 10 Домашняя 20H2
   steps-to-reproduce: |
     1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     2. Деактивировать кнопку In Stock

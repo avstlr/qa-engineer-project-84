@@ -29,7 +29,7 @@
 
 - summary: |
     Отправка оформленного заказа
-  status: fall
+  status: fail
 
 - summary: |
     Удаление товаров из корзины кнопкой Clear cart

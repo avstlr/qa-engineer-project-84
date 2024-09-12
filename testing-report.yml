@@ -1,64 +1,64 @@
 ---
 - summary: |
-Поиск товара по ключевому слову в строке Поиск
-status: pass
+    Поиск товара по ключевому слову в строке Поиск
+  status: pass
 
 - summary: |
-Проверка работы фильтра по категориям товара
-status: pass
+    Проверка работы фильтра по категориям товара
+  status: pass
 
 - summary: |
-Проверка поиска товаров при помощи фильтра по бренду
-status: pass
+    Проверка поиска товаров при помощи фильтра по бренду
+  status: pass
 
 - summary: |
-Проверка работоспособности чек-бокса In Stock
-status: pass
+    Проверка работоспособности чек-бокса In Stock
+  status: pass
 
 - summary: |
-Проверка работы фильтра по стоимости товара
-status: pass
+    Проверка работы фильтра по стоимости товара
+  status: pass
 
 - summary: |
-Проверка работоспособности возможности просматривать карточку товара
-status: pass
+    Проверка работоспособности возможности просматривать карточку товара
+  status: pass
 
 - summary: |
-Удаление товара из корзины кнопкой Delete
-status: pass
+    Удаление товара из корзины кнопкой Delete
+  status: pass
 
 - summary: |
-Отправка оформленного заказа
-status: fall
+    Отправка оформленного заказа
+  status: fall
 
 - summary: |
-Удаление товаров из корзины кнопкой Clear cart
-status: pass
+    Удаление товаров из корзины кнопкой Clear cart
+  status: pass
 
 - summary: |
-Проверка работоспособности кнопки Continue shopping
-status: pass
+    Проверка работоспособности кнопки Continue shopping
+  status: pass
 
 - summary: |
-Проверка работоспособности кнопки Checkout
-status: pass
+    Проверка работоспособности кнопки Checkout
+  status: pass
 
 - summary: |
-Проверка счетчика товаров Cart
-status: pass
+    Проверка счетчика товаров Cart
+  status: pass
 
 - summary: |
-Проверка возможности изменить язык в магазине через кнопку Language
-status: pass
+    Проверка возможности изменить язык в магазине через кнопку Language
+  status: pass
 
 - summary: |
-Проверка работоспособности кнопки Store
-status: pass
+    Проверка работоспособности кнопки Store
+  status: pass
 
 - summary: |
-Проверка работоспособности кнопки Next
-status: pass
+    Проверка работоспособности кнопки Next
+  status: pass
 
 - summary: |
-Проверка работоспособности кнопки Previous
-status: pass
+    Проверка работоспособности кнопки Previous
+  status: pass

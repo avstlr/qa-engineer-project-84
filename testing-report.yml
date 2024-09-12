@@ -49,7 +49,7 @@
 
 - summary: |
     Проверка возможности изменить язык в магазине через кнопку Language
-  status: pass
+  status: fail
 
 - summary: |
     Проверка работоспособности кнопки Store

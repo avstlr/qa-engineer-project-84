@@ -1,0 +1,83 @@
+---
+test-cases:
+- summary: |
+Поиск товара по ключевому слову в строке Поиск
+status: pass
+
+- summary: |
+Проверка работы фильтра по категориям товара
+status: pass
+
+- summary: |
+Проверка поиска товаров при помощи фильтра по бренду
+status: pass
+
+- summary: |
+Проверка работы фильтра по стоимости товара
+status: pass
+
+- summary: |
+Проверка работоспособности возможности просматривать карточку товара
+status: pass
+
+- summary: |
+Удаление товара из корзины кнопкой Delete
+status: pass
+
+- summary: |
+Удаление товаров из корзины кнопкой Clear cart
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Continue shopping
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Checkout
+status: pass
+
+- summary: |
+Проверка счетчика товаров Cart
+status: pass
+
+- summary: |
+Проверка работоспособности кнопки Store
+status: pass
+
+- summary: |
+Проверка возможности изменить язык в магазине через кнопку Language
+status: pass
+
+- summary: |
+Отправка оформленного заказа
+status: fall
+
+bugreports:
+- summary: |
+При деактивации чек-бокса In Stock отображается товар, которого нет в наличии
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+Деактивировать кнопку In Stock
+exspected-result: |
+Отображается товар, которого нет в наличии
+actual-result: |
+Отображается товар, который есть в наличии
+Пропадает кнопка Next
+Приложен скриншот ошибки Screenshot Bug/bugInStock.png
+
+- summary: |
+Страница магазина перезагружается если нажать на название магазина Hexlet Store
+environment: |
+Google Chrome Версия 128.0.6613.137 (Официальная сборка), (64 бит)
+ОС Windows 10 Домашняя 20H2
+steps-to-reproduce: |
+Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+Открыть карточку любого товара или Cart 
+Нажать на название магазина Hexlet Store
+exspected-result: |
+Пользователя возвращает на страницу магазина без перезагрузки страницы
+actual-result: |
+Страница магазина обновляется

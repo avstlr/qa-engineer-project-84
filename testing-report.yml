@@ -28,6 +28,10 @@ status: pass
 status: pass
 
 - summary: |
+Отправка оформленного заказа
+status: fall
+
+- summary: |
 Удаление товаров из корзины кнопкой Clear cart
 status: pass
 

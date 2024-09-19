@@ -13,9 +13,17 @@ test-cases:
     status: pass
 
   - summary: |
+      Проверка работоспособности чек-бокса In Stock
+    status: pass
+
+  - summary: |
+      Проверка ввода цены с отрицательным значением в фильтре стоимости товара
+    status: fail
+
+  - summary: |
       Проверка работы фильтра по стоимости товара
     status: fail
-    
+
   - summary: |
       Проверка работоспособности возможности просматривать карточку товара
     status: pass
@@ -30,10 +38,6 @@ test-cases:
 
   - summary: |
       Проверка работоспособности кнопки Continue shopping
-    status: pass
-    
-  - summary: |
-      Проверка работоспособности кнопки Checkout
     status: pass
 
   - summary: |
@@ -51,6 +55,14 @@ test-cases:
   - summary: |
       Отправка оформленного заказа
     status: fail
+
+  - summary: |
+      Проверка работоспособности кнопки Next
+    status: pass
+
+  - summary: |
+      Проверка работоспособности кнопки Previous
+    status: pass
 
 bugreports:
   - summary: |
